@@ -1,0 +1,165 @@
+/*Resetando alguns estilos que já vem com o navegador*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Retirando as bolinhas pretas que seguem as imegens da lista <ul>*/
+ul {
+  list-style: none;
+}
+
+header {
+  padding-top: 32px;
+  height: calc(120px + 32px);
+}
+
+header div {
+  width: 120px;
+  margin: auto;
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+  
+  border-radius: 50%;
+
+  display: flex;
+  padding: 4px;
+
+  transition: transform 0.3s;
+}
+
+header div:hover {
+  transform: scale(1.1);
+}
+
+header div img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/*Definições para a imagem de fundo*/
+body {
+  background-image: url(./assets/Fundo.jpg); /*Colocando a imagem de fundo*/
+  background-position: top center; /*Posicionando o fundo ao centro*/
+  background-size: 100% auto; /**/
+  background-repeat: no-repeat; /*Retirando a repetição da imagem de fundo*/
+  background-color: #121214; /*Colocando a cor de fundo para completar a imagem*/
+}
+
+/*Customizando Fontes pelo fonts.google.com*/
+body * {
+  font-family: 'Inter', sans-serif;
+  line-height: 160%;
+}
+
+/*Colocando borda sólida para visualizar as divisões da página*/
+main * {
+  /*border: solid 1px red;*/
+}
+
+/*Definindo a largura do main*/
+main {
+  max-width: 580px;
+  width: 90%;
+  margin: 32px auto;
+  display: grid;
+  gap: 24px;
+
+}
+
+section { 
+  color: white;
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+  padding-top: 4px;
+  border-radius: 10px;
+}
+
+section div {
+  background-color: #2A2634;
+  padding: 32px;
+  padding-top: 24px;
+  border-radius: 8px;
+  /*border-top: 4px solid red;*/ /*BORDA PARA OS CARDS, PORÉM NESTE CASO TEREMOS DE
+  UTILIZAR MAIS DE UMA COR, O QUE NÃO PODEMOS FAZER COM O BORDER-TOP!!*/
+}
+
+section h2 {
+  letter-spacing: -0.47px;
+}
+
+section p {
+  letter-spacing: -0.18px;
+  color: #A1A1AA; 
+}
+
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+section ul li {
+  transition: transform 0.3s;
+}
+
+section ul li:hover {
+  transform: scale(1.1);
+}
+
+.games-list img {
+  width: 90px;
+  border-radius: 8px;
+}
+
+.channel-list img {
+  border-radius: 50%;
+  width: 70px;
+  border: solid 1px #443E54;
+  }
+
+  /*ANIMATION*/
+
+  header div {
+    animation: fromTop 0.7s 0.4s backwards;
+  }
+
+  main section {
+    animation: fromBottom 0.7s;
+  }
+
+  main section:nth-child(1) {
+    animation-delay: 0;
+  }
+
+  main section:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+
+  main section:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes fromTop {
+    from{
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fromBottom {
+    from{
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+
+    to{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
